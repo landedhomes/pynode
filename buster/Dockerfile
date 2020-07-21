@@ -1,6 +1,6 @@
 FROM python:3.8.3-buster
 
-RUN pip install flake8 autopep8 pytest grpcio grpcio-tools django djangorestframework psycopg2 drf-extensions
+RUN pip install flake8 autopep8 pytest grpcio grpcio-tools django djangorestframework psycopg2 drf-extensions gunicorn
 
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
