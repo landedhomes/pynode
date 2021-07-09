@@ -68,7 +68,7 @@ RUN set -ex \
   # smoke test
   && yarn --version
 
-RUN apt-get -y update && apt-get install -y postgresql-client gdal-bin
+RUN apt-get -y update && apt-get install -y postgresql-client gdal-bin libmemcached-dev
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
     && unzip awscliv2.zip \
