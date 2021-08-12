@@ -73,3 +73,7 @@ RUN apt-get -y update && apt-get install -y postgresql-client gdal-bin libmemcac
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
     && unzip awscliv2.zip \
     && ./aws/install
+
+RUN curl -L "https://github.com/auth0/auth0-cli/releases/download/v0.10.2/auth0-cli_0.10.2_Linux_x86_64.tar.gz" -o "auth0.tar.gz" \
+    && tar -xf auth0.tar.gz \
+    && mv auth0 /usr/local/bin
