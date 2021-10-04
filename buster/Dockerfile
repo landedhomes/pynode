@@ -68,3 +68,5 @@ RUN set -ex \
   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
   # smoke test
   && yarn --version
+
+RUN curl -sL https://sentry.io/get-cli/ | bash
