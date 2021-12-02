@@ -1,4 +1,4 @@
-FROM python:3.8.3-buster
+FROM python:3.9.9-bullseye
 
 RUN pip install flake8 autopep8 pytest grpcio grpcio-tools django djangorestframework psycopg2 drf-extensions gunicorn
 
@@ -68,7 +68,7 @@ RUN set -ex \
   # smoke test
   && yarn --version
 
-RUN apt-get --allow-releaseinfo-change update && apt-get install -y postgresql-client gdal-bin libmemcached-dev
+RUN apt-get --allow-releaseinfo-change update && apt-get install -y postgresql-client gdal-bin libmemcached-dev vim
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
     && unzip awscliv2.zip \
