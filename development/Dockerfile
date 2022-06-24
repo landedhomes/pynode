@@ -5,7 +5,7 @@ RUN pip install flake8 autopep8 pytest grpcio grpcio-tools django djangorestfram
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
-ENV NODE_VERSION 14.16.0
+ENV NODE_VERSION 14.17.6
 
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && case "${dpkgArch##*-}" in \
