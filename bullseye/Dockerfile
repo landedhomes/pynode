@@ -71,4 +71,7 @@ RUN set -ex \
 ENV PNPM_VERSION 7.17.1
 RUN npm install -g pnpm@$PNPM_VERSION
 
+ENV TURBO_VERSION 1.6.3
+RUN npm install -g turbo@$TURBO_VERSION
+
 RUN apt-get update && apt-get install -y gdal-bin libmemcached-dev
