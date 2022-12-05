@@ -68,4 +68,7 @@ RUN set -ex \
   # smoke test
   && yarn --version
 
+ENV PNPM_VERSION 7.17.1
+RUN npm install -g pnpm@$PNPM_VERSION
+
 RUN apt-get update && apt-get install -y gdal-bin libmemcached-dev

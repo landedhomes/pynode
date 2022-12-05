@@ -68,6 +68,9 @@ RUN set -ex \
   # smoke test
   && yarn --version
 
+ENV PNPM_VERSION 7.17.1
+RUN npm install -g pnpm@$PNPM_VERSION
+
 RUN apt-get --allow-releaseinfo-change update && apt-get install -y postgresql-client gdal-bin libmemcached-dev vim
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
